@@ -1,0 +1,7 @@
+[JhapaScript51]
+name = "jh51"
+version = "0.1.0"
+description = "A version of the language 'JhapaScript' that compiles to 8051 assembly code"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
