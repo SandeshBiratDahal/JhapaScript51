@@ -17,9 +17,15 @@ def main():
 
     codeLines = separateLines(code)
 
+    tokenizedLines = []
     for line in codeLines:
         tokens = tokenizeLine(line)
-        for token in tokens: print(token.type, token.value)
+        tokenizedLines.append(tokens)
+
+    print(tokenizedLines)
+
+def interpretTokenizedLines(tokenizedLines: list[list[Token]]):
+    pass
 
 def separateLines(code: str) -> list[str]:
     separated = []
@@ -74,6 +80,50 @@ def tokenizeLine(line: str) -> list[Token]:
                     TokenType.INTEGER, currentCharacter
                 )
             )
+
+        elif character in SYMBOLS:
+            if character == "+": 
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == "-":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == "*":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == "/":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == "(":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == ")":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
+            elif character == "=":
+                tokens.append(
+                    Token(
+                        TokenType.OPERATOR, character
+                    )
+                )
         i += 1
     return tokens
 
